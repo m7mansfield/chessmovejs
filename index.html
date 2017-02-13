@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Chess Moves</title>
+    <meta name="author" content="Michael Mansfield">
+</head>
+<body>
+    <h1>Find Legal Chess Moves</h1>
+    <p>
+        The input format is 2 characters for a piece: "w" for white or "b" for black,
+        followed by "r" (rook), "h" (knight), "b" (bishop), "q" (queen), "k" (king), "p" (pawn).
+        Empty spaces are indicated by "xx". The last line should be the color (lowercase for simplicity).
+    </p>
+    <h3>Example:</h3>
+    <blockquote>
+        br bh bb bq bk bb bh br<br>
+        bp bp bp bp bp bp bp bp<br>
+        xx xx xx xx xx xx xx xx<br>
+        xx xx xx xx xx xx xx xx<br>
+        xx xx xx xx xx xx xx xx<br>
+        xx xx xx xx xx xx xx xx<br>
+        wp wp wp wp wp wp wp wp<br>
+        wr wh wb wq wk wb wh wr<br>
+    </blockquote>
+    <textarea id="input" rows="15" cols="60"></textarea>
+    <br>
+    <h3>And then select whose turn it is:</h3>
+    <select id="turn">
+        <option>White</option>
+        <option>Black</option>
+    </select>
+    <br>
+    <button id="calcMoves">Calculate Moves</button>
+    <br>
+    <h3>Legal Moves:</h3>
+    <p>The bottom left space is (0,0) and the top left space is (0,7).</p>
+    <textarea id="moves" rows="15" cols="60" disabled></textarea>
+    <script src="chess.js"></script>
+</body>
+</html>
